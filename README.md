@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# pacientes-zustand
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple patient management web app built with **React**, **TypeScript**, **Tailwind CSS**, and **Zustand**. It allows users to add, update, and delete patient records using a lightweight and intuitive state management library.
 
-Currently, two official plugins are available:
+## features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📋 create, edit, and delete patient entries
+- 🧩 form validation ensures all fields are completed
+- 🌍 data stored in `localStorage` to preserve state across reloads
+- ⚙️ centralized state management using Zustand for simplicity and performance
+- 🌐 responsive and clean UI styled with Tailwind CSS
 
-## Expanding the ESLint configuration
+## tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** for building reactive user interfaces  
+- **TypeScript** for type safety and improved maintenance  
+- **Zustand** for state management, offering a minimal, flexible store  
+- **Tailwind CSS** for utility-first styling and fast prototyping
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+git clone https://github.com/Angel8118/pacientes-zustand.git
+cd pacientes-zustand
+npm install
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 what i learned
+using Zustand to manage global state without boilerplate
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+persisting state with localStorage and Zustand's subscribe API
+
+form validation with TypeScript and React hooks
+
+responsive layout and design with Tailwind CSS
+
+## 🤝 contribute
+contributions are welcome! if you find any bug or have a suggestion, please open an issue or submit a pull request.
+
+## 📄 license
+this project is licensed under the mit license. see the LICENSE file for details.
+
+## 🌐 Live Demo
+👉 Open the live demo: https://kaleidoscopic-douhua-c7c8d3.netlify.app/
